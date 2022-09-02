@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5", // 目标语言版本
+    "module": "commonjs", // 指定生成代码的模板标准
+    "outDir": "./dist", // outDir用来指定输出文件夹，值为一个文件夹路径字符串，输出的文件都将放置在这个文件夹
+    "rootDir": "./src", // 用来指定编译文件的根目录，编译器会在根目录查找入口文件，如果编译器发现以rootDir的值作为根目录查找入口文件并不会把所有文件加载进去的话会报错，但是不会停止编译
+    "strict": true, // strict的值为true或false，用于指定是否启动所有类型检查，如果设为true则会同时开启下面这几个严格类型检查，默认为false
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "type": ["node"],
+  // 需要编译的的文件和目录
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "public"]
+}
