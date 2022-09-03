@@ -10,7 +10,9 @@
     "esModuleInterop": true, // 通过为导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性
     "allowSyntheticDefaultImports": true, // 用来指定允许从没有默认导出的模块中默认导入
     "skipLibCheck": true, // 忽略声明文件的检查
-    "forceConsistentCasingInFileNames": true // 是否区分文件系统大小写规则，默认：false。
+    "forceConsistentCasingInFileNames": true, // 是否区分文件系统大小写规则，默认：false。
+    "moduleResolution": "node", // 用于选择模块解析策略，有'node'和'classic'两种类型'
+    "noImplicitAny": false
   },
   "type": ["node"], // 加载的声明文件包
   "include": ["src"], // 需要编译的的文件和目录
