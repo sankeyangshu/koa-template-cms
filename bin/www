@@ -7,6 +7,7 @@
 const app = require('../src/app');
 const http = require('http');
 const os = require('os');
+const chalk = require('chalk');
 const { PORT } = require('../src/config');
 
 /**
@@ -110,7 +111,9 @@ function getIPAdress() {
 
 function onListening() {
   const myHost = getIPAdress();
+  const Local = `http://localhost:${port}`;
+  const Network = `http://${myHost}:${port}`;
   console.log('server run at');
-  console.log(`   - Local:   http://localhost:${port}`);
-  console.log(`   - Network: http://${myHost}:${port}`);
+  console.log(`   - Local:   ${chalk.blue(Local)}`);
+  console.log(`   - Network: ${chalk.blue(Network)}`);
 }
