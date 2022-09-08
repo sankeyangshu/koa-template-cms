@@ -6,6 +6,7 @@
 
 const app = require('../src/app');
 const http = require('http');
+const os = require('os');
 const { PORT } = require('../src/config');
 
 /**
@@ -52,7 +53,6 @@ function normalizePort(val) {
 /**
  * Event listener for HTTP server "error" event.
  */
-
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
@@ -76,9 +76,41 @@ function onError(error) {
 }
 
 /**
+ * 获取本地的ip地址
+ * @returns 本地的ip地址
+ */
+function getIPAdress() {
+  // os.networkInterfaces()方法返回被赋予网络地址的网络接口
+  const interfaces = os.networkInterfaces();
+  /*
+		address: 被赋予的IPv4 or IPv6
+		netmask: IPv4 or IPv6 子网掩码
+		family: IPv4 or IPv6
+		mac: 网络接口的MAC地址
+		internal: 如果网络接口是loopback
+				  或相似的远程不能用的接口时 值true 否则值为false
+		scopeid: IPv6数字领域识别码（family为IPv6才可用）
+		cidr: 以CIDR表示法分配的带有路由前缀的IPv4或IPv6地址，
+			  如果netmask参数不可用 该属性为null
+	*/
+  for (const devName in interfaces) {
+    const iface = interfaces[devName];
+    for (let i = 0; i < iface.length; i++) {
+      const alias = iface[i];
+      if (alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal) {
+        return alias.address;
+      }
+    }
+  }
+}
+
+/**
  * Event listener for HTTP server "listening" event.
  */
 
 function onListening() {
-  console.log(`listening at http://localhost:${port}`);
+  const myHost = getIPAdress();
+  console.log('server run at');
+  console.log(`   - Local:   http://localhost:${port}`);
+  console.log(`   - Network: http://${myHost}:${port}`);
 }
