@@ -3,13 +3,14 @@
  * @Author: 三棵杨树
  * @Date: 2022-09-02 21:02:55
  * @LastEditors: 三棵杨树
- * @LastEditTime: 2022-09-03 18:28:06
+ * @LastEditTime: 2022-09-08 21:02:37
  */
 
+import 'module-alias/register';
 import Koa from 'koa';
 import KoaBodyParser from 'koa-bodyparser';
-import InitManger from './middlewares/router';
-import { loggerMiddleware } from './middlewares/logger';
+import InitManger from '@/middlewares/router';
+import { loggerMiddleware } from '@/middlewares/logger';
 
 const app = new Koa();
 

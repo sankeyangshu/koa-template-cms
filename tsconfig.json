@@ -12,7 +12,11 @@
     "skipLibCheck": true, // 忽略声明文件的检查
     "forceConsistentCasingInFileNames": true, // 是否区分文件系统大小写规则，默认：false。
     "moduleResolution": "node", // 用于选择模块解析策略，有'node'和'classic'两种类型'
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "type": ["node"], // 加载的声明文件包
   "include": ["src"], // 需要编译的的文件和目录

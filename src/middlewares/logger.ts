@@ -3,14 +3,14 @@
  * @Author: 三棵杨树
  * @Date: 2022-09-03 15:03:55
  * @LastEditors: 三棵杨树
- * @LastEditTime: 2022-09-03 17:04:24
+ * @LastEditTime: 2022-09-08 21:08:09
  */
 
 import fs from 'fs';
 import path from 'path';
 import log4js from 'log4js'; // 文档 https://log4js-node.github.io/log4js-node/
 import { Context, Next } from 'koa';
-import { LOGPATH } from '../config';
+import { LOGPATH } from '@/config';
 
 // 判断是否有logs目录，没有就新建，用来存放日志
 const logsDir = path.parse(LOGPATH).dir;

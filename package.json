@@ -26,6 +26,9 @@
   "lint-staged": {
     "*.{js,ts}": "eslint --fix"
   },
+  "_moduleAliases": {
+    "@": "./src"
+  },
   "dependencies": {
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
@@ -45,6 +48,7 @@
     "@types/koa": "^2.13.5",
     "@types/koa-bodyparser": "^4.3.7",
     "@types/koa-router": "^7.4.4",
+    "@types/module-alias": "^2.0.1",
     "@types/node": "^18.7.14",
     "@types/require-directory": "^2.1.2",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
@@ -60,6 +64,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
+    "module-alias": "^2.2.2",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",

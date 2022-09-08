@@ -3,7 +3,7 @@
  * @Author: 三棵杨树
  * @Date: 2022-09-02 22:17:16
  * @LastEditors: 三棵杨树
- * @LastEditTime: 2022-09-03 15:44:11
+ * @LastEditTime: 2022-09-08 20:44:03
  */
 
 import path from 'path';
@@ -26,6 +26,6 @@ const CRYPTO_SECRET_KEY = 'Hyominn00$Tara';
 /**
  * 日志文件路径
  */
-const LOGPATH = path.resolve(__dirname, './logs/koa-template.log');
+const LOGPATH = path.resolve(__dirname, '../../logs/koa-template.log');
 
 export { PORT, SECRET, CRYPTO_SECRET_KEY, LOGPATH };
