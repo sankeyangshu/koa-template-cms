@@ -3,7 +3,7 @@
  * @Author: 三棵杨树
  * @Date: 2022-09-02 21:28:14
  * @LastEditors: 三棵杨树
- * @LastEditTime: 2022-09-03 18:24:56
+ * @LastEditTime: 2022-09-09 22:08:42
  */
 module.exports = {
   env: {
@@ -19,7 +19,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     project: 'tsconfig.json',
+    sourceType: 'module',
   },
+  plugins: ['@typescript-eslint'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-extraneous-class': 'off',
