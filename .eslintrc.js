@@ -3,7 +3,7 @@
  * @Author: 三棵杨树
  * @Date: 2022-09-02 21:28:14
  * @LastEditors: 三棵杨树
- * @LastEditTime: 2022-09-09 22:08:42
+ * @LastEditTime: 2022-09-21 20:53:35
  */
 module.exports = {
   env: {
@@ -15,10 +15,12 @@ module.exports = {
     'standard-with-typescript',
     'plugin:prettier/recommended', // 添加 prettier 插件
   ],
+  parser: '@typescript-eslint/parser',
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
-    project: 'tsconfig.json',
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
