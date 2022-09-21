@@ -16,6 +16,6 @@
     }
   },
   "type": ["node"], // 加载的声明文件包
-  "include": [".eslintrc.js", "src"], // 需要编译的的文件和目录
+  "include": ["src"], // 需要编译的的文件和目录
   "exclude": ["node_modules", "dist", "public"] // exclude表示要排除的、不编译的文件
 }
