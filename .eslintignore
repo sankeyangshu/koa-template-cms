@@ -4,3 +4,4 @@ logs
 commitlint.config.js
 webpack.config.js
 .eslintrc.js
+bin
