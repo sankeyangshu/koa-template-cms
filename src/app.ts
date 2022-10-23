@@ -3,7 +3,7 @@
  * @Author: 三棵杨树
  * @Date: 2022-09-02 21:02:55
  * @LastEditors: 三棵杨树
- * @LastEditTime: 2022-09-08 21:02:37
+ * @LastEditTime: 2022-10-23 13:46:41
  */
 
 import 'module-alias/register';
@@ -27,4 +27,4 @@ app.use(
 // 路由自动加载
 InitManger.InitCore(app);
 
-module.exports = app;
+export default app;

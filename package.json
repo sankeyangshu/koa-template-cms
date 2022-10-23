@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "使用Node.JS Koa2+TS 构建的CMS开发框架",
   "scripts": {
-    "dev": "nodemon -e ts,tsx --exec ts-node ./bin/www",
+    "dev": "nodemon -e ts,tsx --exec ts-node ./src/server.ts",
     "build": "rm -rf dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
